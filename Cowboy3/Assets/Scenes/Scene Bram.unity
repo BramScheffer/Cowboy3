@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  BulletRange: 10
+  BulletRange: 100
 --- !u!114 &723542810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,7 +813,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 487250567}
-  m_PlaneDistance: 1
+  m_PlaneDistance: 0.31
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -909,7 +909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da967510e0737154898117a8d3e93848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingHealth: 10
+  StartingHealth: 4
 --- !u!65 &1394458252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1167,7 +1167,7 @@ GameObject:
   - component: {fileID: 2024188131}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
