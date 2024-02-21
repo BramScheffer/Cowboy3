@@ -13,6 +13,8 @@ public class Gun : MonoBehaviour
     public bool automatic;
     public float currentCooldown;
     private bool isReloading;
+    public AudioSource source;
+    public AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
@@ -76,7 +78,7 @@ public class Gun : MonoBehaviour
             isReloading = true;
             OnReload?.Invoke();
             // You can play reload animation or sound here if needed
-
+            source.PlayOneShot(clip);
             // Reset ammo after reloadTime
             Invoke("FinishReload", reloadTime);
         }
