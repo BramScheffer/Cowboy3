@@ -13,6 +13,7 @@ public class Rotation : MonoBehaviour
     public float maxRotX;
     public float mouseX;
     public float mouseY;
+    public float sensetivety;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +23,8 @@ public class Rotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
+        mouseX = Input.GetAxis("Mouse X") * sensetivety; 
+        mouseY = Input.GetAxis("Mouse Y") * sensetivety;
 
         rotationX -= mouseY;
         rotationX = Mathf.Clamp(rotationX, minRotX, maxRotX);
