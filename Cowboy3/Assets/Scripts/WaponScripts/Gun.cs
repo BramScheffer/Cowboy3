@@ -15,8 +15,10 @@ public class Gun : MonoBehaviour
     private bool isReloading;
     public AudioSource reloadSource;
     public AudioClip reloadClip;
-    public AudioSource shootSource
-    ; public AudioClip shootClip;
+    public AudioSource shootSource;
+    public AudioClip shootClip;
+    public Animation gunRecoil;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +47,8 @@ public class Gun : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-
                 Shoot();
+                gunRecoil.Play();
             }
         }
 

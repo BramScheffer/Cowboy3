@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1325224497112121867}
   - component: {fileID: 8435275820078735212}
   - component: {fileID: 2724159250126857487}
+  - component: {fileID: 982688760732687476}
   m_Layer: 0
   m_Name: revolver1
   m_TagString: Untagged
@@ -138,3 +139,20 @@ MonoBehaviour:
   reloadClip: {fileID: 0}
   shootSource: {fileID: 0}
   shootClip: {fileID: 0}
+  gunRecoil: {fileID: 982688760732687476}
+--- !u!111 &982688760732687476
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344800836280897386}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 67ccf53fc52d67a47bc7c4cc95291dd4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 67ccf53fc52d67a47bc7c4cc95291dd4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
