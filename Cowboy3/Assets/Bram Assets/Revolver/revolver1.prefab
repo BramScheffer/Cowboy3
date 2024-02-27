@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  BulletRange: 10
+  BulletRange: 2300
 --- !u!114 &2724159250126857487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
       m_Calls: []
   fireCooldown: 0
   reloadTime: 3.204
-  maxAmmo: 10
+  maxAmmo: 8
   automatic: 0
   currentCooldown: 0
   reloadSource: {fileID: 0}

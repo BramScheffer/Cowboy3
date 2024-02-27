@@ -1181,7 +1181,7 @@ MonoBehaviour:
   speed: 8
   dir: {x: 0, y: 0, z: 0}
   rb: {fileID: 1790108798}
-  jumpSpeed: 200
+  jumpSpeed: 180
   isGrounded: 0
 --- !u!54 &1790108798
 Rigidbody:
@@ -1552,8 +1552,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2724159250126857487, guid: 80c5528d116d28e45966d995172a910b,
         type: 3}
-      propertyPath: maxAmmo
-      value: 8
+      propertyPath: automatic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6313522001842251528, guid: 80c5528d116d28e45966d995172a910b,
         type: 3}
