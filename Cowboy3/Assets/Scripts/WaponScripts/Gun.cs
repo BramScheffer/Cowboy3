@@ -5,7 +5,6 @@ public class Gun : MonoBehaviour
 {
     public UnityEvent OnGunShoot;
     public UnityEvent OnReload;
-
     public float fireCooldown;
     public float reloadTime;
     public int maxAmmo;
@@ -18,6 +17,7 @@ public class Gun : MonoBehaviour
     public AudioSource shootSource;
     public AudioClip shootClip;
     public Animation gunRecoil;
+
 
 
     // Start is called before the first frame update
@@ -83,6 +83,7 @@ public class Gun : MonoBehaviour
             isReloading = true;
             OnReload?.Invoke();
             // You can play reload animation or sound here if needed
+
             reloadSource.PlayOneShot(reloadClip);
             // Reset ammo after reloadTime
             Invoke("FinishReload", reloadTime);
