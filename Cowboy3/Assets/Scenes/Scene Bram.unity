@@ -1542,12 +1542,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5801419992015361248}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &543450652835285699 stripped
-Animation:
-  m_CorrespondingSourceObject: {fileID: 982688760732687476, guid: 80c5528d116d28e45966d995172a910b,
-    type: 3}
-  m_PrefabInstance: {fileID: 5801419992015361248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5801419992015361248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1556,36 +1550,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 487250568}
     m_Modifications:
-    - target: {fileID: 982688760732687476, guid: 80c5528d116d28e45966d995172a910b,
+    - target: {fileID: 2655093242140865653, guid: 80c5528d116d28e45966d995172a910b,
         type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 982688760732687476, guid: 80c5528d116d28e45966d995172a910b,
-        type: 3}
-      propertyPath: m_Animations.Array.data[1]
+      propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 7400000, guid: de228abb9121acd4692c3f655b9c102c, type: 2}
-    - target: {fileID: 2724159250126857487, guid: 80c5528d116d28e45966d995172a910b,
-        type: 3}
-      propertyPath: GunReload
-      value: 
-      objectReference: {fileID: 7400000, guid: de228abb9121acd4692c3f655b9c102c, type: 2}
-    - target: {fileID: 2724159250126857487, guid: 80c5528d116d28e45966d995172a910b,
-        type: 3}
-      propertyPath: automatic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2724159250126857487, guid: 80c5528d116d28e45966d995172a910b,
-        type: 3}
-      propertyPath: gunReload
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2724159250126857487, guid: 80c5528d116d28e45966d995172a910b,
-        type: 3}
-      propertyPath: gunAnimations
-      value: 
-      objectReference: {fileID: 543450652835285699}
+      objectReference: {fileID: 9100000, guid: dc4372b7d87c7034f9d7e223b06d7143, type: 2}
     - target: {fileID: 6313522001842251528, guid: 80c5528d116d28e45966d995172a910b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1624,7 +1593,7 @@ PrefabInstance:
     - target: {fileID: 6313522001842251528, guid: 80c5528d116d28e45966d995172a910b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -171.00333
+      value: -11.350002
       objectReference: {fileID: 0}
     - target: {fileID: 6313522001842251528, guid: 80c5528d116d28e45966d995172a910b,
         type: 3}

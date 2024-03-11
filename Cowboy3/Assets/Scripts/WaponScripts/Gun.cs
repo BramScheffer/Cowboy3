@@ -48,7 +48,7 @@ public class Gun : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Shoot();
-                gunRecoil.Play();
+               
             }
         }
 
@@ -83,7 +83,7 @@ public class Gun : MonoBehaviour
             isReloading = true;
             OnReload?.Invoke();
             // You can play reload animation or sound here if needed
-
+            
             reloadSource.PlayOneShot(reloadClip);
             // Reset ammo after reloadTime
             Invoke("FinishReload", reloadTime);
