@@ -16,7 +16,6 @@ public class Gun : MonoBehaviour
     public AudioClip reloadClip;
     public AudioSource shootSource;
     public AudioClip shootClip;
-    public Animation gunRecoil;
 
 
 

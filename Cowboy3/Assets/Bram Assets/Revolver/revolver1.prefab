@@ -139,7 +139,6 @@ MonoBehaviour:
   reloadClip: {fileID: 0}
   shootSource: {fileID: 0}
   shootClip: {fileID: 0}
-  gunRecoil: {fileID: 0}
 --- !u!95 &2655093242140865653
 Animator:
   serializedVersion: 5
