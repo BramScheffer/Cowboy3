@@ -16,7 +16,7 @@ public class Gun : MonoBehaviour
     public AudioClip reloadClip;
     public AudioSource shootSource;
     public AudioClip shootClip;
-
+    public Animator animShoot;
 
 
     // Start is called before the first frame update
@@ -46,6 +46,8 @@ public class Gun : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                animShoot.SetTrigger("Shoot");
+                animShoot.ResetTrigger("Idle");
                 Shoot();
                
             }
