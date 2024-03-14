@@ -29,38 +29,42 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isReloading)
+        if (!PauseMenu.isPaused)
         {
-            // Handle reloading
-            return;
-        }
-
-        if (automatic)
-        {
-            if (Input.GetMouseButton(0))
+            if (isReloading)
             {
-                Shoot();
+                // Handle reloading
+                return;
+            }
+
+            if (automatic)
+            {
+                if (Input.GetMouseButton(0))
+                {
+                    Shoot();
+                }
+            }
+            else
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    animShoot.SetTrigger("Shoot");
+                    animShoot.ResetTrigger("Idle");
+                    Shoot();
+
+                }
+            }
+
+            // Handle cooldown
+            currentCooldown -= Time.deltaTime;
+
+            // Handle reload input
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reload();
             }
         }
-        else
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                animShoot.SetTrigger("Shoot");
-                animShoot.ResetTrigger("Idle");
-                Shoot();
-               
-            }
-        }
-
-        // Handle cooldown
-        currentCooldown -= Time.deltaTime;
-
-        // Handle reload input
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Reload();
-        }
+        
     }
 
     void Shoot()

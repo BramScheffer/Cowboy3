@@ -17,19 +17,38 @@ public class Rotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (!PauseMenu.isPaused)
+        {
+         Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+
     }
 
-    // Update is called once per frame
+    // Update is called once per frame 
     void Update()
     {
-        mouseX = Input.GetAxis("Mouse X") * sensetivety; 
-        mouseY = Input.GetAxis("Mouse Y") * sensetivety;
+        if (!PauseMenu.isPaused)
+        {
+            mouseX = Input.GetAxis("Mouse X") * sensetivety;
+            mouseY = Input.GetAxis("Mouse Y") * sensetivety;
 
-        rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, minRotX, maxRotX);
+            rotationX -= mouseY;
+            rotationX = Mathf.Clamp(rotationX, minRotX, maxRotX);
 
-        transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        transform.parent.Rotate(Vector3.up * mouseX);
+            transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.parent.Rotate(Vector3.up * mouseX);
+
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
     }
 }
