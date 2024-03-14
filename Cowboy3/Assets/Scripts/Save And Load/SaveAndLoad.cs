@@ -6,14 +6,14 @@ using UnityEditor;
 
 public class SaveAndLoad : MonoBehaviour
 {
-    public string jsonData;
+    public SaveDataModel loadItInHere;
     // Start is called before the first frame update
     void Start()
     {
-        SaveData();
+        
     }
 
-    void SaveData()
+    public void SaveData()
     {
         SaveDataModel model = new SaveDataModel();
         model.positie = transform.position;
@@ -24,13 +24,14 @@ public class SaveAndLoad : MonoBehaviour
         print(bestandsPad);
         File.WriteAllText(bestandsPad, json);
     }
-    void LoadData()
+    public void LoadData()
     {
         string filePath = Application.persistentDataPath + "/SaveData.json";
 
         if (File.Exists(filePath))
         {
-            jsonData = File.ReadAllText(filePath);
+             = File.ReadAllText(filePath);
+            //loadItInHere moet worden wat je in laad, als een "SaveDataModel".
 
         }
     }
