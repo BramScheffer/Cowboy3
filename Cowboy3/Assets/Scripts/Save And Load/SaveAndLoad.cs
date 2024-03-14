@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+using UnityEditor;
 
 public class SaveAndLoad : MonoBehaviour
 {
+    public string jsonData;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +24,18 @@ public class SaveAndLoad : MonoBehaviour
         print(bestandsPad);
         File.WriteAllText(bestandsPad, json);
     }
-}
-public class SaveDataModel
-{
-    public Vector3 positie;
+    void LoadData()
+    {
+        string filePath = Application.persistentDataPath + "/SaveData.json";
 
+        if (File.Exists(filePath))
+        {
+            jsonData = File.ReadAllText(filePath);
+
+        }
+    }
+    public class SaveDataModel
+    {
+        public Vector3 positie;
+    }
 }
