@@ -30,11 +30,25 @@ public class SaveAndLoad : MonoBehaviour
 
         if (File.Exists(filePath))
         {
-             = File.ReadAllText(filePath);
-            //loadItInHere moet worden wat je in laad, als een "SaveDataModel".
-
+            string json = File.ReadAllText(filePath);
+            loadItInHere = JsonUtility.FromJson<SaveDataModel>(json);
+            if (loadItInHere != null)
+            {
+                Debug.Log("Data loaded successfully!");
+            }
+            else
+            {
+                Debug.LogError("Failed to deserialize JSON data into SaveDataModel!");
+            }
         }
+        else
+        {
+            Debug.LogError("Save data file not found!");
+        }
+        //loadItInHere moet worden wat je in laad, als een "SaveDataModel".
+
     }
+
     public class SaveDataModel
     {
         public Vector3 positie;
