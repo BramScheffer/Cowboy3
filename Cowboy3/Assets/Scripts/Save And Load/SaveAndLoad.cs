@@ -7,6 +7,7 @@ using UnityEditor;
 public class SaveAndLoad : MonoBehaviour
 {
     public SaveDataModel loadItInHere;
+    public Transform cube;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class SaveAndLoad : MonoBehaviour
         {
             string json = File.ReadAllText(filePath);
             loadItInHere = JsonUtility.FromJson<SaveDataModel>(json);
+            cube.transform.position = loadItInHere.positie;
             if (loadItInHere != null)
             {
                 Debug.Log("Data loaded successfully!");
