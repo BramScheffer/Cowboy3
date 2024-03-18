@@ -35,7 +35,7 @@ public class SaveAndLoad : MonoBehaviour
             string json = File.ReadAllText(filePath);
             loadItInHere = JsonUtility.FromJson<SaveDataModel>(json);
             cube.transform.position = loadItInHere.positie;
-            cube.transform.rotation = loadItInHere.rotate;
+            
             if (loadItInHere != null)
             {
                 Debug.Log("Data loaded successfully!");
@@ -56,6 +56,6 @@ public class SaveAndLoad : MonoBehaviour
     public class SaveDataModel
     {
         public Vector3 positie;
-        public Vector3 rotate;
+        
     }
 }
