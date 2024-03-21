@@ -8,7 +8,7 @@ using UnityEditor;
 public class SaveAndLoad : MonoBehaviour
 {
     public SaveDataModel loadItInHere;
-    public Transform cube;
+    public Transform character;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,7 @@ public class SaveAndLoad : MonoBehaviour
     {
         SaveDataModel model = new SaveDataModel();
         model.positie = transform.position;
+        model.rotatie = transform.rotation;
 
         string json = JsonUtility.ToJson(model);
 
@@ -34,8 +35,8 @@ public class SaveAndLoad : MonoBehaviour
         {
             string json = File.ReadAllText(filePath);
             loadItInHere = JsonUtility.FromJson<SaveDataModel>(json);
-            cube.transform.position = loadItInHere.positie;
-            cube.transform.rotation = Quaternion.Euler(loadItInHere.rotate);
+            character.transform.position = loadItInHere.positie;
+            character.transform.rotation = loadItInHere.rotatie;
 
             if (loadItInHere != null)
             {
@@ -57,7 +58,7 @@ public class SaveAndLoad : MonoBehaviour
     public class SaveDataModel
     {
         public Vector3 positie;
-        public Vector3 rotate;
+        public Quaternion rotatie;
         
     }
 }
