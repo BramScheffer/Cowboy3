@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
     public float currentCooldown;
     private bool isReloading;
     public AudioSource gunShoot;
+    public AudioSource gunReload;
 
 
 
@@ -86,7 +87,7 @@ public class Gun : MonoBehaviour
             isReloading = true;
             OnReload?.Invoke();
             // You can play reload animation or sound here if needed
-            
+            gunReload.Play();
 
             // Reset ammo after reloadTime
             Invoke("FinishReload", reloadTime);

@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Bram.unity
     guid: 95c03c536b60ec744abf166573bdf2a7
+  - enabled: 1
+    path: Assets/UI/Death Screen/Death Screen.unity
+    guid: 15da1fe797848984ca7e9ff9d7954a0c
   - enabled: 0
     path: Assets/Scenes/Main Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
