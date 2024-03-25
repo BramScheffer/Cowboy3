@@ -14,6 +14,7 @@ public class Gun : MonoBehaviour
     private bool isReloading;
     public AudioSource gunShoot;
     public AudioSource gunReload;
+    public Animator mAnimator;
 
 
 
@@ -23,6 +24,7 @@ public class Gun : MonoBehaviour
 
         currentAmmo = maxAmmo;
         currentCooldown = fireCooldown;
+        mAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class Gun : MonoBehaviour
                 {
                     Shoot();
                     gunShoot.Play();
+
                 }
             }
             else
@@ -51,6 +54,7 @@ public class Gun : MonoBehaviour
 ;
                     Shoot();
                     gunShoot.Play();
+
                 }
             }
 
@@ -73,6 +77,7 @@ public class Gun : MonoBehaviour
             OnGunShoot?.Invoke();
             currentCooldown = fireCooldown;
             currentAmmo--;
+            mAnimator.SetTrigger("Shoot");
             if (currentAmmo == 0)
             {
                 Reload();
@@ -88,7 +93,7 @@ public class Gun : MonoBehaviour
             OnReload?.Invoke();
             // You can play reload animation or sound here if needed
             gunReload.Play();
-
+            mAnimator.SetTrigger("Reload");
             // Reset ammo after reloadTime
             Invoke("FinishReload", reloadTime);
         }
