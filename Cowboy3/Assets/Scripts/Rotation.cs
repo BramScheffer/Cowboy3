@@ -17,15 +17,6 @@ public class Rotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!PauseMenu.isPaused)
-        {
-         Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-
 
     }
 
