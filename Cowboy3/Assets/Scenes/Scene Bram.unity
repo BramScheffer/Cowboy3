@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 181928535}
   - component: {fileID: 181928534}
   - component: {fileID: 181928533}
+  - component: {fileID: 181928537}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Ground
@@ -623,6 +624,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181928537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181928532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.2
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &277434266
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +818,7 @@ PrefabInstance:
     - target: {fileID: 6130929905452736797, guid: ee52d47d7c74720459749c8db64df2aa,
         type: 3}
       propertyPath: m_Name
-      value: Tin Can2 1
+      value: Tin Can
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2869,7 +2901,7 @@ PrefabInstance:
     - target: {fileID: 5967563475348444610, guid: def011585b467d64285cb341876b7746,
         type: 3}
       propertyPath: m_Name
-      value: Milk Jar2
+      value: Milk Jar
       objectReference: {fileID: 0}
     - target: {fileID: 7506357042416366623, guid: def011585b467d64285cb341876b7746,
         type: 3}
@@ -2937,7 +2969,7 @@ PrefabInstance:
     - target: {fileID: 5067307752792808407, guid: 90ff28186d862aa47b93a858a044ac0e,
         type: 3}
       propertyPath: m_Name
-      value: Lantern3
+      value: Lantern
       objectReference: {fileID: 0}
     - target: {fileID: 6723150680053018618, guid: 90ff28186d862aa47b93a858a044ac0e,
         type: 3}
@@ -3130,6 +3162,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0cea356cb15cd64eb1b91f9a77e3ad7, type: 3}
+--- !u!1001 &2620430414717283520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.45682
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.5298862
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277098356500619773, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321897468134222583, guid: a10b1e299c3fb27469d46704acef723a,
+        type: 3}
+      propertyPath: m_Name
+      value: Lamp Post
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a10b1e299c3fb27469d46704acef723a, type: 3}
 --- !u!1001 &3158342251557800878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3332,7 +3432,7 @@ PrefabInstance:
     - target: {fileID: 7361794140864935548, guid: 3ff11347c164c3248a756610ee644eb5,
         type: 3}
       propertyPath: m_Name
-      value: Sign3
+      value: Sign
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3400,7 +3500,7 @@ PrefabInstance:
     - target: {fileID: 7076319987430881079, guid: c718e7e1891345b4192baa02b2ac4707,
         type: 3}
       propertyPath: m_Name
-      value: AmmoBox5
+      value: AmmoBox
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3604,7 +3704,7 @@ PrefabInstance:
     - target: {fileID: 5757238510140632887, guid: 248d1f2d648f23141a510c8cc9c2e6e8,
         type: 3}
       propertyPath: m_Name
-      value: Tin Can Broken4
+      value: Tin Can Broken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3764,7 +3864,7 @@ PrefabInstance:
     - target: {fileID: 760289091241818741, guid: e6d0c05507e8bec468e276c86e6827d2,
         type: 3}
       propertyPath: m_Name
-      value: Soda Can3
+      value: Soda Can
       objectReference: {fileID: 0}
     - target: {fileID: 5141853903218195804, guid: e6d0c05507e8bec468e276c86e6827d2,
         type: 3}
@@ -3882,7 +3982,7 @@ PrefabInstance:
     - target: {fileID: 5668767171550749955, guid: 4f7cefc36d1ccdf44934e2c630e8c1cf,
         type: 3}
       propertyPath: m_Name
-      value: Roof3
+      value: Roof
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3916,3 +4016,4 @@ SceneRoots:
   - {fileID: 1130363860415986285}
   - {fileID: 283743741}
   - {fileID: 9030279171904791806}
+  - {fileID: 2620430414717283520}
