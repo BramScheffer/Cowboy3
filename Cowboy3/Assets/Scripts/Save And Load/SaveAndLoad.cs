@@ -37,21 +37,7 @@ public class SaveAndLoad : MonoBehaviour
             loadItInHere = JsonUtility.FromJson<SaveDataModel>(json);
             character.transform.position = loadItInHere.positie;
             character.transform.rotation = loadItInHere.rotatie;
-
-            if (loadItInHere != null)
-            {
-                Debug.Log("Data loaded successfully!");
-            }
-            else
-            {
-                Debug.LogError("Failed to deserialize JSON data into SaveDataModel!");
-            }
         }
-        else
-        {
-            Debug.LogError("Save data file not found!");
-        }
-        //loadItInHere moet worden wat je in laad, als een "SaveDataModel".
 
     }
 
@@ -59,6 +45,8 @@ public class SaveAndLoad : MonoBehaviour
     {
         public Vector3 positie;
         public Quaternion rotatie;
+
+
         
     }
 }
