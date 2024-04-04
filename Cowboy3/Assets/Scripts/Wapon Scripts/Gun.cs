@@ -30,11 +30,12 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //als hij niet gepaused is maar wel aan het reloaden is, dan begint de computer het script weer te lezen aan het begin
         if (!PauseMenu.isPaused)
         {
             if (isReloading)
             {
-                // Handle reloading
+                // Handelt reloading
                 return;
             }
 
@@ -58,10 +59,10 @@ public class Gun : MonoBehaviour
                 }
             }
 
-            // Handle cooldown
+            // Hendelt de cooldown
             currentCooldown -= Time.deltaTime;
 
-            // Handle reload input
+            // als je op R klikt word de reload component geladen
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Reload();
@@ -72,10 +73,12 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
+        //als de cooldown kleiner is of 0 is en de current ammo is meer dan 0, kan je schieten
         if (currentCooldown <= 0f && currentAmmo > 0)
         {
             OnGunShoot?.Invoke();
             currentCooldown = fireCooldown;
+            //hiermee gaat er 1 bullet van de current ammo
             currentAmmo--;
             mAnimator.SetTrigger("Shoot");
             if (currentAmmo == 0)
@@ -94,7 +97,7 @@ public class Gun : MonoBehaviour
             // You can play reload animation or sound here if needed
             gunReload.Play();
             mAnimator.SetTrigger("Reload");
-            // Reset ammo after reloadTime
+            // Reset de ammo na reloadTime
             Invoke("FinishReload", reloadTime);
         }
     }
