@@ -5,6 +5,8 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     [SerializeField] private float StartingHealth;
+    private ScoreManager scoreManager;
+    public int scoreValue;
     private float health;
     public float Health
     {
@@ -21,12 +23,14 @@ public class Entity : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+
         }
     }
     
-    // Start is called before the first frame update
+    
     void Start()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
         Health = StartingHealth;
     }
 
@@ -34,5 +38,12 @@ public class Entity : MonoBehaviour
     void Update()
     {
         
+    }
+    void OnDestroy()
+    {
+        if (scoreManager != null)
+        {
+            scoreManager.IncrementScore(scoreValue);
+        }
     }
 }

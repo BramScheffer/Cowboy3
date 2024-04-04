@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SCORE: 0'
+  m_text: 'Kills: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e42baaa8e31e2344ba51e584e5e8322, type: 2}
   m_sharedMaterial: {fileID: 5637560903150283962, guid: 5e42baaa8e31e2344ba51e584e5e8322,
@@ -3277,6 +3277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1714549383}
   - component: {fileID: 1714549382}
+  - component: {fileID: 1714549384}
   m_Layer: 0
   m_Name: GameMenager
   m_TagString: Untagged
@@ -3312,6 +3313,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714549384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714549381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbd0ef00f09cc34a8c8e48f290c2e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 102152046}
+  score: 0
 --- !u!1 &1731608834
 GameObject:
   m_ObjectHideFlags: 0

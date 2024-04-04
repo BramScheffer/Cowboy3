@@ -1,21 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
-public class ScoreMenager : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
+    public TextMeshProUGUI scoreText;
+    public int score = 0;
+
     void Start()
     {
-        
+        UpdateScoreText();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void IncrementScore(int amount)
     {
-        
+        score += amount;
+        UpdateScoreText();
+    }
+
+    void UpdateScoreText()
+    {
+        scoreText.text = "Kills: " + score.ToString();
     }
 }
