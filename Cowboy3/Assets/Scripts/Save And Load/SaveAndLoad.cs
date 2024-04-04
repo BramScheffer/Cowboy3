@@ -9,6 +9,9 @@ public class SaveAndLoad : MonoBehaviour
 {
     public SaveDataModel loadItInHere;
     public Transform character;
+    public ScoreManager scoreManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,9 @@ public class SaveAndLoad : MonoBehaviour
         SaveDataModel model = new SaveDataModel();
         model.positie = transform.position;
         model.rotatie = transform.rotation;
+        model.score = scoreManager.score;
+        
+       
 
         string json = JsonUtility.ToJson(model);
 
@@ -37,6 +43,8 @@ public class SaveAndLoad : MonoBehaviour
             loadItInHere = JsonUtility.FromJson<SaveDataModel>(json);
             character.transform.position = loadItInHere.positie;
             character.transform.rotation = loadItInHere.rotatie;
+            scoreManager.score = loadItInHere.score;
+       
         }
 
     }
@@ -45,8 +53,8 @@ public class SaveAndLoad : MonoBehaviour
     {
         public Vector3 positie;
         public Quaternion rotatie;
-
-
+        public int score;
+     
         
     }
 }
