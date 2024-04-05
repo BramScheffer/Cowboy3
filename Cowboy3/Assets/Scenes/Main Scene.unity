@@ -2000,6 +2000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 893385767}
   scoreManager: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!1 &947911568
 GameObject:
   m_ObjectHideFlags: 0

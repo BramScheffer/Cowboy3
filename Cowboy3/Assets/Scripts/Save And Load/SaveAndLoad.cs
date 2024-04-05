@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEditor;
+using TMPro;
 
 
 public class SaveAndLoad : MonoBehaviour
@@ -10,6 +11,7 @@ public class SaveAndLoad : MonoBehaviour
     public SaveDataModel loadItInHere;
     public Transform character;
     public ScoreManager scoreManager;
+    public PlayerHealth playerHealth;
 
 
     // Start is called before the first frame update
@@ -24,7 +26,8 @@ public class SaveAndLoad : MonoBehaviour
         model.positie = transform.position;
         model.rotatie = transform.rotation;
         model.score = scoreManager.score;
-        
+        model.scoreText = scoreManager.scoreText;
+        model.health = playerHealth.health;
        
 
         string json = JsonUtility.ToJson(model);
@@ -44,6 +47,8 @@ public class SaveAndLoad : MonoBehaviour
             character.transform.position = loadItInHere.positie;
             character.transform.rotation = loadItInHere.rotatie;
             scoreManager.score = loadItInHere.score;
+            scoreManager.scoreText = loadItInHere.scoreText;
+            playerHealth.health = loadItInHere.health;
        
         }
 
@@ -54,7 +59,9 @@ public class SaveAndLoad : MonoBehaviour
         public Vector3 positie;
         public Quaternion rotatie;
         public int score;
-     
-        
+        public TextMeshProUGUI scoreText;
+        public float health;
+
+
     }
 }
