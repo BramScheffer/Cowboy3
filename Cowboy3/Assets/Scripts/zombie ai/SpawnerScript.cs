@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour
 {
     public GameObject zombiePrefab;
-    public float spawnRadius;
+    public float spawnRadiusX;
+    public float spawnRadiusY;
     public int zombieCount;
     public int maxZombieCount;
     // Start is called before the first frame update
