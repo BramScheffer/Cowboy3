@@ -2203,8 +2203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 893385767}
-  scoreManager: {fileID: 0}
-  playerHealth: {fileID: 0}
+  scoreManager: {fileID: 1714549384}
+  playerHealth: {fileID: 893385761}
 --- !u!1 &947911568
 GameObject:
   m_ObjectHideFlags: 0
