@@ -34,11 +34,7 @@ public class Entity : MonoBehaviour
         Health = StartingHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     void OnDestroy()
     {
         if (scoreManager != null)

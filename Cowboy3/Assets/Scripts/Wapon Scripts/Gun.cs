@@ -62,7 +62,7 @@ public class Gun : MonoBehaviour
             // Hendelt de cooldown
             currentCooldown -= Time.deltaTime;
 
-            // als je op R klikt word de reload component geladen
+            // als je op R klikt word de reload function geladen
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Reload();

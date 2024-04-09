@@ -18,9 +18,11 @@ public class DoDamage : MonoBehaviour
 
     public void Shoot()
     {
+        
         Ray gunRay = new Ray(PlayerCamera.position, PlayerCamera.forward);
         if (Physics.Raycast(gunRay, out RaycastHit hitInfo, BulletRange))
         {
+            //checkt of het object dat geraakt is een bepaald component heeft dat entity heet en damage kan opnemen.
             if (hitInfo.collider.gameObject.TryGetComponent (out Entity enemy)) 
             {
                 enemy.Health -= Damage;
