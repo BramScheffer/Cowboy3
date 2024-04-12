@@ -7,21 +7,39 @@ public class SpawnerScript : MonoBehaviour
     public GameObject zombiePrefab;
     public float spawnRadiusX;
     public float spawnRadiusY;
-    public int zombieCount;
     public int maxZombieCount;
-    // Start is called before the first frame update
+    private int currentZombieCount;
+
     void Start()
     {
-        zombieCount = maxZombieCount;
+        currentZombieCount = maxZombieCount;
+        SpawnZombies(maxZombieCount);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (zombieCount < maxZombieCount)
+        if (currentZombieCount < maxZombieCount)
         {
-            Instantiate(zombiePrefab);
-            Debug.Log("Spawn een nieuwe zombie");
+            SpawnZombies(1);
         }
     }
+
+    void SpawnZombies(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            Vector3 spawnPosition = GetRandomSpawnPosition();
+            Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
+            currentZombieCount++;
+        }
+    }
+
+    Vector3 GetRandomSpawnPosition()
+    {
+        float randomX = Random.Range(-spawnRadiusX, spawnRadiusX);
+        float randomY = Random.Range(-spawnRadiusY, spawnRadiusY);
+        Vector3 randomSpawnPosition = new Vector3(randomX, 0, randomY) + transform.position;
+        return randomSpawnPosition;
+    }
 }
+
