@@ -7,31 +7,29 @@ public class SpawnerScript : MonoBehaviour
     public GameObject zombiePrefab;
     public float spawnRadiusX;
     public float spawnRadiusY;
-    public int maxZombieCount;
     private int currentZombieCount;
+
+    public float spawnInterval = 5f; // Interval between zombie spawns
+    private float nextSpawnTime;
 
     void Start()
     {
-        currentZombieCount = maxZombieCount;
-        SpawnZombies(maxZombieCount);
+        nextSpawnTime = Time.time + spawnInterval; // Set initial spawn time
     }
 
     void Update()
     {
-        if (currentZombieCount < maxZombieCount)
+        if (Time.time >= nextSpawnTime)
         {
-            SpawnZombies(1);
+            SpawnZombie();
+            nextSpawnTime = Time.time + spawnInterval; // Update next spawn time
         }
     }
 
-    void SpawnZombies(int count)
+    void SpawnZombie()
     {
-        for (int i = 0; i < count; i++)
-        {
-            Vector3 spawnPosition = GetRandomSpawnPosition();
-            Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
-            currentZombieCount++;
-        }
+        Vector3 spawnPosition = GetRandomSpawnPosition();
+        Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
     }
 
     Vector3 GetRandomSpawnPosition()
@@ -42,4 +40,3 @@ public class SpawnerScript : MonoBehaviour
         return randomSpawnPosition;
     }
 }
-

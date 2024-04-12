@@ -42,7 +42,7 @@ public class Entity : MonoBehaviour
     }
 
 
-    void OnDestroy()
+    public void OnDestroy()
     {
         if (scoreManager != null)
         {
