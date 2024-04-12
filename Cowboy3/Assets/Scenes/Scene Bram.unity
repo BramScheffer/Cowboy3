@@ -927,8 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2f544f6ea747040ad014eda54336c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 8626483850325977245, guid: 8778f6ab1aaaa3d4889948a651d1f9af,
-    type: 3}
+  zombiePrefab: {fileID: 0}
   spawnRadiusX: 12
   spawnRadiusY: 12
   maxZombieCount: 5
@@ -941,7 +940,7 @@ Transform:
   m_GameObject: {fileID: 294736319}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4763726, y: 1.3073361, z: 1.6943784}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
