@@ -3007,18 +3007,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09087616680a0904f9e46dc35469a471, type: 3}
---- !u!82 &1090183420 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4215568952783057190, guid: 9fd39a39122375f45b191fdaaf05f17c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6845028861283510308}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1090183421 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2543106039146207210, guid: 9fd39a39122375f45b191fdaaf05f17c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6845028861283510308}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1130194591
 GameObject:
   m_ObjectHideFlags: 0
@@ -6708,11 +6696,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5569986918895351501, guid: 4081244d92c525e428ee91fc136ce37a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: aa44c1b8605cfbc4ca85c121019683b3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6854,16 +6837,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1714549384}
-    - target: {fileID: 6136165463733244134, guid: 9fd39a39122375f45b191fdaaf05f17c,
-        type: 3}
-      propertyPath: gunShoot
-      value: 
-      objectReference: {fileID: 1090183421}
-    - target: {fileID: 6136165463733244134, guid: 9fd39a39122375f45b191fdaaf05f17c,
-        type: 3}
-      propertyPath: gunReload
-      value: 
-      objectReference: {fileID: 1090183420}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
